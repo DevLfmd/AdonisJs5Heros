@@ -67,7 +67,7 @@ export default class SearchesController {
         return (
             arr.filter((value) => (
                 Object.keys(value).some((key) => (
-                    JSON.stringify(value[key]).trim().includes(q, 0) === true ? 
+                    JSON.stringify(value[key]).includes(q, 0) === true ? 
                         value : false
                 ))
             ))
@@ -104,6 +104,6 @@ export default class SearchesController {
             return response.send(search);
         };
   
-        return [];
+        return response.send([]);
     };
 };

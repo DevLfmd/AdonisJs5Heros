@@ -87,7 +87,7 @@ export default class SearchesController {
 
         // Faremos essa verificação para
         // caso o nosso cache não estiver inicializado.
-        if(heros !== null) {
+        if(heros === null) {
             const req = await this.fetchHeros();
             
             if(req.data)
